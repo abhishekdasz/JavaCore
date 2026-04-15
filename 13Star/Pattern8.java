@@ -2,7 +2,7 @@ public class Pattern8
 {
     public static void main(String[] args) 
     {
-        int n = 10; 
+        int n = 4; 
         for(int row=1; row<=n; row++)
         {
             for(int col=1; col<=row-1; col++)

@@ -34,6 +34,11 @@ public class Que
         return a;
     }
 
+    static int updateMethod(int x)
+    {
+        x= x+10;
+        return x;
+    }
     public static void main(String[] args) 
     {
         greetMsg();   
@@ -42,5 +47,9 @@ public class Que
         System.out.println(getMaximum(10, 20));
         System.out.println(calculatePerc(120, 200));
         System.out.println(methOverloading(10, "Hello"));
+
+        int x=50;
+        System.out.println(updateMethod(x));
+        System.out.println(x);
     }
 }

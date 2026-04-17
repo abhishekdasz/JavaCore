@@ -28,6 +28,12 @@ public class Que
     {
         return ((float)obtained/total)*100;
     }
+    static int methOverloading(int a, String b)
+    {
+        System.out.println("Hello World, a: "+ a +" & b:" + b);
+        return a;
+    }
+
     public static void main(String[] args) 
     {
         greetMsg();   
@@ -35,5 +41,6 @@ public class Que
         System.out.println(isEven(10));
         System.out.println(getMaximum(10, 20));
         System.out.println(calculatePerc(120, 200));
+        System.out.println(methOverloading(10, "Hello"));
     }
 }

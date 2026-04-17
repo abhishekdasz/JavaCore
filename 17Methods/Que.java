@@ -16,10 +16,24 @@ public class Que
         }
         return false;
     }
+    static int getMaximum(int a, int b)
+    {
+        if(a<b)
+        {
+            return b;
+        }
+        return a;
+    }
+    static float calculatePerc(int obtained, int total)
+    {
+        return ((float)obtained/total)*100;
+    }
     public static void main(String[] args) 
     {
         greetMsg();   
         System.out.println(sumOfTwoNums(10, 5));
         System.out.println(isEven(10));
+        System.out.println(getMaximum(10, 20));
+        System.out.println(calculatePerc(120, 200));
     }
 }

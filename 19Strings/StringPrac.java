@@ -50,5 +50,27 @@ public class StringPrac
         String str6 = "Hello World";
         System.out.println(str6.startsWith("Ho"));
         System.out.println(str6.endsWith("lD"));
+
+        int a = 123;
+        System.out.println(a+1); 
+        String a2 = String.valueOf(a);
+        System.out.println(a2); 
+        System.out.println(a2+1); 
+
+        String str7 = "Hello";
+        char ch [] = str7.toCharArray();
+        for(char i=0; i<=ch.length-1; i++)
+        {
+            System.out.println(ch[i]);
+        }
+
+        String str8 = " ";
+        System.out.println(str8.isEmpty());
+        System.out.println(str8.isBlank());
+        String str9 = "hello";
+        str9 = str9.replace('h', 'H');
+        System.out.println(str9);
+        String str10 = "Thank You";
+        System.out.println(str10);
     }
 }

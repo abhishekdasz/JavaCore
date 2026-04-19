@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TwoDarr1ay 
+public class TwoDArray 
 {
     public static void main(String[] args) 
     {

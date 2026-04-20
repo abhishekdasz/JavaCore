@@ -63,6 +63,25 @@ public class Maths
             return false;
         }
     }
+    static void isPrime(int num)
+    {
+        int count = 0;
+        for(int i=1; i<=num; i++)
+        {
+            if(num%i==0)
+            {
+                count++;
+            }
+        }
+        if(count > 2)
+        {
+            System.out.println("Not Prime");
+        }
+        else
+        {
+            System.out.println("Prime");
+        }
+    }
     public static void main(String[] args) 
     {
         System.out.println("printDigits");
@@ -74,5 +93,8 @@ public class Maths
         System.out.println("isPalindrome");
         System.out.println(isPalindrome(12121));
         System.out.println(isPalindrome(123));
+
+        System.out.println("isPrime");
+        isPrime(13);
     }
 }

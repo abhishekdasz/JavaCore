@@ -66,14 +66,15 @@ public class Maths
     static void isPrime(int num)
     {
         int count = 0;
-        for(int i=1; i<=num; i++)
+        for(int i=2; i<=num-1; i++)
         {
             if(num%i==0)
             {
                 count++;
+                break;
             }
         }
-        if(count > 2)
+        if(count > 0)
         {
             System.out.println("Not Prime");
         }
@@ -95,6 +96,7 @@ public class Maths
         System.out.println(isPalindrome(123));
 
         System.out.println("isPrime");
-        isPrime(13);
+        isPrime(23);
+        isPrime(24);
     }
 }

@@ -11,11 +11,13 @@ public class MathPrac
         int ans = a;
         return ans;
     }
+    
     static int findLCM(int a, int b)
     {
         int lcm = (a*b)/findGCD(a, b);
         return lcm;
     }
+    
     static boolean isArmstrongNum(int num)
     {
         int originalNum = num;
@@ -28,7 +30,6 @@ public class MathPrac
             int cubeOfRem = rem * rem * rem;
             sum = sum + cubeOfRem;
         }
-        System.out.println(originalNum);
         if(originalNum == sum)
         {
             return true;
@@ -38,10 +39,47 @@ public class MathPrac
             return false;
         }
     }
+    
+    static void findDivisors(int num)
+    {
+        for(int i=1; i<=num-1; i++)
+        {
+            if(num%i==0)
+            {
+                System.out.println(i);
+            }
+        }
+        System.out.println(num);
+    }
+
+    static boolean isPerfectNum(int num)
+    {
+        int sum=0;
+        for(int i=1; i<=num-1; i++)
+        {
+            if(num%i==0)
+            {
+                sum = sum+i;
+            }
+        }
+        if(num == sum)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public static void main(String[] args) 
     {
         System.out.println(findGCD(18, 12));
         System.out.println(findLCM(18, 12));
         System.out.println(isArmstrongNum(153));
+        System.out.println("divisors");
+        findDivisors(28);
+        System.out.println("isPerfectNum");
+        System.out.println(isPerfectNum(28));
     }
 }

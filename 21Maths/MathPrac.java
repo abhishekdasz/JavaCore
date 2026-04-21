@@ -74,6 +74,10 @@ public class MathPrac
 
     static boolean isPrime(int num)
     {
+        if(num==1)
+        {
+            return false;
+        }
         for(int i=2; i*i<=num; i++)
         {
             if(num%i==0)
@@ -82,6 +86,18 @@ public class MathPrac
             }
         }
         return true;
+    }
+
+    static void printPrimeNum(int start, int end)
+    {
+        for(int i=start; i<=end; i++)
+        {
+            boolean primeOrNot = isPrime(i);
+            if(primeOrNot == true)
+            {
+                System.out.print(i + " ");
+            }
+        }
     }
 
     public static void main(String[] args) 
@@ -95,5 +111,7 @@ public class MathPrac
         System.out.println(isPerfectNum(28));
         System.out.println("isPrime");
         System.out.println(isPrime(23));
+        System.out.println("prime numbers with range");
+        printPrimeNum(1, 100);
     }
 }

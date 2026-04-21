@@ -72,6 +72,18 @@ public class MathPrac
         }
     }
 
+    static boolean isPrime(int num)
+    {
+        for(int i=2; i*i<=num; i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) 
     {
         System.out.println(findGCD(18, 12));
@@ -81,5 +93,7 @@ public class MathPrac
         findDivisors(28);
         System.out.println("isPerfectNum");
         System.out.println(isPerfectNum(28));
+        System.out.println("isPrime");
+        System.out.println(isPrime(23));
     }
 }

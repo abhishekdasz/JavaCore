@@ -16,9 +16,32 @@ public class MathPrac
         int lcm = (a*b)/findGCD(a, b);
         return lcm;
     }
+    static boolean isArmstrongNum(int num)
+    {
+        int originalNum = num;
+        int sum =0;
+        while(num!=0)
+        {
+            int rem = num%10;
+            num = num/10;
+            System.out.println(rem);
+            int cubeOfRem = rem * rem * rem;
+            sum = sum + cubeOfRem;
+        }
+        System.out.println(originalNum);
+        if(originalNum == sum)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public static void main(String[] args) 
     {
         System.out.println(findGCD(18, 12));
         System.out.println(findLCM(18, 12));
+        System.out.println(isArmstrongNum(153));
     }
 }

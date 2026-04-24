@@ -28,19 +28,45 @@ class Vehicle
     {
         this.speed = topSpeed;
     }
-    public static void dispalyInfo()
+    public void dispalyInfo()
     {
-        System.out.println();
+        System.out.println(brand+" "+model+" has top speed of "+speed);
     }
 }
 
 class Car extends Vehicle
 {
-    String fuelType; 
+    private String fuelType; 
+    public String getFuelType()
+    {
+        return fuelType;
+    }
+    public void setFuelType(String car_fuelType)
+    {
+        fuelType = car_fuelType;
+    }
+    public void dispalyInfo()
+    {
+        super.dispalyInfo();
+        System.out.println("Fuel type: "+getFuelType());
+    }
 }
 class Bike extends Vehicle
 {
-    boolean hasGear;
+    private boolean hasGear;
+    public boolean getHasGear()
+    {
+        return hasGear;
+    }
+    public void setHasGear(boolean bike_hasGear)
+    {
+        hasGear = bike_hasGear;
+    }
+    public void dispalyInfo()
+    {
+        super.dispalyInfo();
+        System.out.println("Has gear: "+hasGear);
+    }
 }
 public class Inheritance 
 {
@@ -50,13 +76,15 @@ public class Inheritance
         c.setBrand(("Tata"));
         c.setModel( " Punch");
         c.setSpeed(180);
-        System.out.println(c.getBrand()+c.getModel()+" has top speed of "+c.getSpeed());
+        c.setFuelType(" Petrol variant");
+        c.dispalyInfo();
         
 
         Bike b =new Bike();
         b.setBrand("Honda");
         b.setModel(" Activa");
         b.setSpeed(100);
-        System.out.println(b.getBrand()+b.getModel()+" has top speed of "+b.getSpeed());
+        b.setHasGear(false);
+        b.dispalyInfo();
     }
 }

@@ -29,6 +29,10 @@ class Circle extends Shape
 }
 class Polymorphism 
 {
+    public static void doDrawing(Shape s)
+    {
+        s.drawShape();
+    }
     public static void main(String[] args) 
     {
         Calculator c = new Calculator();
@@ -40,5 +44,8 @@ class Polymorphism
 
         Circle ci = new Circle();
         ci.drawShape();
+
+        doDrawing(s);
+        doDrawing(ci);
     }
 }

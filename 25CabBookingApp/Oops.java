@@ -1,4 +1,4 @@
-class CabBooking
+abstract class CabBooking
 {
     private String brand;
     private String model;
@@ -13,10 +13,7 @@ class CabBooking
         System.out.println("Your cab successfully booked.");
         System.out.println("Cab Details: "+brand +" "+model);
     }
-    double calculateFare(int distance)
-    {
-        return 0;
-    }
+    abstract double calculateFare(int distance);
 }
 class CarBook extends CabBooking
 {
@@ -29,7 +26,7 @@ class CarBook extends CabBooking
     }
 
     @Override
-    double calculateFare(int distance) 
+    public double calculateFare(int distance) 
     {
         if(noOfSeats>4)
         {
@@ -51,7 +48,7 @@ class BikeBook extends CabBooking
         this.isHelmetIncluded = isHelmetIncluded;
     }
     @Override
-    double calculateFare(int distance)
+    public double calculateFare(int distance)
     {
         if(isHelmetIncluded)
         {
@@ -67,12 +64,14 @@ public class Oops
 {
     public static void main(String[] args) 
     {
-        CabBooking ride = new CarBook("Suzuki", "Dzire", 5);
-        ride.displayInfo();
-        System.out.println(ride.calculateFare(60));
-
-        CabBooking bikeride = new BikeBook("Hero", "Splendor", true);
-        bikeride.displayInfo();
-        System.out.println(bikeride.calculateFare(15)); 
+        CabBooking cabride [] = {
+            new CarBook("Toyota", "Innova", 6),
+            new BikeBook("Suzuki", "Access", false)
+        };
+        for(CabBooking r: cabride)
+        {
+            r.displayInfo();
+            System.out.println("Fare:" + r.calculateFare(10));
+        }
     }
 }

@@ -67,11 +67,27 @@ class ArrayPractice
         System.out.println("Count of zeros: "+countOfZero);
         System.out.println("Count of ones: "+ countOfOne);        
     }
+    void unSortedElem(int arr[])
+    {
+        for(int i=0; i<=arr.length-1; i++)
+        {
+            if(arr[i]<arr[i+1])
+            {
+                continue;
+            }
+            else
+            {
+                System.out.println("Unsorted elem: "+arr[i]);
+                break;
+            }
+        }
+    }
     public static void main(String[] args) 
     {
         int arr[] = {10,20,60,40,50};
         int arr2[] = {2,-3,-1,4,6,-9};
         int arr3[] = {0,1,0,0,0,1};
+        int arr4[] = {0,5,3,7,11,2};
         ArrayPractice obj = new ArrayPractice();
         obj.LinearSearch(arr, 50);   
         System.out.println("Max elem from an array:");
@@ -83,5 +99,8 @@ class ArrayPractice
 
         System.out.println("Count of zeros and ones in array:");
         obj.countOfZeroOne(arr3);
+
+        System.out.println("Unsorted elem in array:");
+        obj.unSortedElem(arr4);
     }
 }

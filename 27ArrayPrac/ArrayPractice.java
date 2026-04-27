@@ -109,6 +109,20 @@ class ArrayPractice
             }
         }
     }
+    void AlternateExtremeElem(int arr[])
+    {
+        int arr2[] = new int[arr.length]; 
+        for(int i=0; i<=arr.length-1; i++)
+        {
+
+            arr2[i] = arr[arr.length-(i+1)];
+        }
+        System.out.println("new array:");
+        for(int i=0; i<=arr2.length-1; i++)
+        {
+            System.out.println(arr2[i]);
+        }
+    }
     public static void main(String[] args) 
     {
         int arr[] = {10,20,60,40,50};
@@ -140,6 +154,6 @@ class ArrayPractice
         System.out.println("Intersection elements of two array:");
         obj.interSectionArrayElem(arr6, arr7);
 
-
+        obj.AlternateExtremeElem(arr7);
     }
 }

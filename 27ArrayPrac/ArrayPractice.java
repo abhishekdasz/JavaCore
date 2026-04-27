@@ -109,7 +109,7 @@ class ArrayPractice
             }
         }
     }
-    void AlternateExtremeElem(int arr[])
+    void ReverseArrayElem(int arr[])
     {
         int arr2[] = new int[arr.length]; 
         for(int i=0; i<=arr.length-1; i++)
@@ -121,6 +121,34 @@ class ArrayPractice
         for(int i=0; i<=arr2.length-1; i++)
         {
             System.out.println(arr2[i]);
+        }
+    }
+    void AlternateExtreme(int arr[])
+    {
+        int arr2 [] = new int[arr.length];
+
+        int left = 0;
+        int right = arr.length-1;
+        int index = 0;
+
+        while(left<=right)
+        {
+            if(left == right)
+            {
+                arr2[index++] =arr[left];
+            }
+            else
+            {
+                arr2[index++] = arr[left];
+                arr2[index++] = arr[right];
+            }
+            left++;
+            right--;
+        }
+
+        for(int i=0; i<=arr2.length-1; i++)
+        {
+            System.out.println(arr[i]);
         }
     }
     public static void main(String[] args) 
@@ -154,6 +182,10 @@ class ArrayPractice
         System.out.println("Intersection elements of two array:");
         obj.interSectionArrayElem(arr6, arr7);
 
-        obj.AlternateExtremeElem(arr7);
+        obj.ReverseArrayElem(arr7);
+
+        int arr8[] = {1,2,3,4,5};
+        System.out.println("alternate extreme elem of array:");
+        obj.AlternateExtreme(arr8);
     }
 }

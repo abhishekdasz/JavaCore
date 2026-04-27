@@ -31,13 +31,35 @@ class ArrayPractice
         }
         return max;
     }
+    void sumOfPosNeg(int arr[])
+    {
+        int sumOfPos = 0;
+        int sumOfNeg = 0;
+        for(int num: arr)
+        {
+            if(num<0)
+            {
+                sumOfNeg = sumOfNeg + num;
+            }
+            else
+            {
+                sumOfPos = sumOfPos + num;
+            }
+        }
+        System.out.println("Sum of Positive nums: "+sumOfPos);
+        System.out.println("Sum of Negative nums: "+ sumOfNeg);
+    }
     public static void main(String[] args) 
     {
         int arr[] = {10,20,60,40,50};
+        int arr2[] = {2,-3,-1,4,6,-9};
         ArrayPractice obj = new ArrayPractice();
         obj.LinearSearch(arr, 50);   
         System.out.println("Max elem from an array:");
         System.out.println(obj.MaxElemInArray(arr));
         System.out.println(obj.MaxElem(arr));
+
+        System.out.println("Sum of Positive and Negative nums:");
+        obj.sumOfPosNeg(arr2);
     }
 }

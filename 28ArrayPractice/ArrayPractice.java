@@ -46,6 +46,26 @@ class ArrayPractice
             System.out.print(arr[i]+" ");
         }
     }
+    void extremeElemInALtManner(int arr[])
+    {
+        int left = 0;
+        int right = arr.length-1; 
+
+        while(left<=right)
+        {
+            if(left==right)
+            {
+                System.out.println(arr[left]+" ");
+            }
+            else
+            {
+                System.out.print(arr[left]+" ");
+                System.out.print(arr[right]+" ");
+            }
+            left++;
+            right--;
+        }
+    }
     public static void main(String[] args) 
     {
         ArrayPractice obj = new ArrayPractice();
@@ -60,5 +80,9 @@ class ArrayPractice
         System.out.println();
         System.out.println("Right shift elem of array by one place with one array only:");
         obj.rightShift(arr2);
+
+        System.out.println("Printing Extreme Element in array in alternate Manner:");
+        int arr3[] = {1,2,3,4,5,6,7,8};
+        obj.extremeElemInALtManner(arr3);
     }
 }

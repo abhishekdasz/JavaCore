@@ -66,7 +66,7 @@ class ArrayPractice
             right--;
         }
     }
-    void rightShiftElemByK(int arr[], int k)
+    void rightShiftElemByKPrintONLY(int arr[], int k)
     {
         int last[] = new int[k];
 
@@ -109,6 +109,6 @@ class ArrayPractice
         System.out.println();
         int arr4[] = {10,20,30,40,50,60,70,80};
         System.out.println("rightShiftElemByK:");
-        obj.rightShiftElemByK(arr4, 3);
+        obj.rightShiftElemByKPrintONLY(arr4, 3);
     }
 }

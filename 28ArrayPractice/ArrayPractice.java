@@ -66,6 +66,26 @@ class ArrayPractice
             right--;
         }
     }
+    void rightShiftElemByK(int arr[], int k)
+    {
+        int last[] = new int[k];
+
+        int right = arr.length-k;
+        for(int j=0; j<=last.length-1; j++)
+        {
+            last[j] = arr[right];
+            right++;
+        }
+
+        for(int i=0; i<=last.length-1; i++)
+        {
+            System.out.println(last[i]);
+        }
+        for(int i=0; i<=arr.length-k-1; i++)
+        {
+            System.out.println(arr[i]);
+        }
+    }
     public static void main(String[] args) 
     {
         ArrayPractice obj = new ArrayPractice();
@@ -81,8 +101,14 @@ class ArrayPractice
         System.out.println("Right shift elem of array by one place with one array only:");
         obj.rightShift(arr2);
 
+        System.out.println();
         System.out.println("Printing Extreme Element in array in alternate Manner:");
         int arr3[] = {1,2,3,4,5,6,7,8};
         obj.extremeElemInALtManner(arr3);
+
+        System.out.println();
+        int arr4[] = {10,20,30,40,50,60,70,80};
+        System.out.println("rightShiftElemByK:");
+        obj.rightShiftElemByK(arr4, 3);
     }
 }

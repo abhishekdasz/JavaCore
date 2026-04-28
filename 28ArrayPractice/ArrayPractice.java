@@ -32,6 +32,20 @@ class ArrayPractice
             System.out.print(arr2[i] + " ");
         }
     }
+    void rightShift(int arr[])
+    {
+        int last = arr[arr.length-1];
+        for(int i=arr.length-1; i>=1; i--)
+        {
+            arr[i] = arr[i-1];
+        }
+        arr[0] = last;
+
+        for(int i=0; i<=arr.length-1; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
     public static void main(String[] args) 
     {
         ArrayPractice obj = new ArrayPractice();
@@ -42,5 +56,9 @@ class ArrayPractice
         System.out.println("Right shift elem of array by one place:");
         int arr2[] = {10,20,30,40,50,60,70};
         obj.shiftElemByOne(arr2);
+
+        System.out.println();
+        System.out.println("Right shift elem of array by one place with one array only:");
+        obj.rightShift(arr2);
     }
 }

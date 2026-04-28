@@ -19,12 +19,28 @@ class ArrayPractice
             System.out.print(arr[i] +" ");
         }
     }
-    
+    void shiftElemByOne(int arr[])
+    {
+        int arr2[] = new int[arr.length];
+        arr2[0] = arr[arr.length-1];
+        for(int i=1; i<=arr.length-1; i++)
+        {
+            arr2[i] = arr[i-1]; 
+        }
+        for(int i=0; i<=arr.length-1; i++)
+        {
+            System.out.print(arr2[i] + " ");
+        }
+    }
     public static void main(String[] args) 
     {
         ArrayPractice obj = new ArrayPractice();
         int arr[] = {1,2,3,4,5,6,7};
         obj.reverseArray(arr);   
 
+        System.out.println();
+        System.out.println("Right shift elem of array by one place:");
+        int arr2[] = {10,20,30,40,50,60,70};
+        obj.shiftElemByOne(arr2);
     }
 }

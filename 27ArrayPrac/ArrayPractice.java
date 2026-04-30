@@ -148,7 +148,7 @@ class ArrayPractice
 
         for(int i=0; i<=arr2.length-1; i++)
         {
-            System.out.println(arr[i]);
+            System.out.println(arr2[i]);
         }
     }
     public static void main(String[] args) 
